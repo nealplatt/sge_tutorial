@@ -13,6 +13,21 @@ Submits batch/non-interactive jobs to the scheduler. This can be done in (atleas
 qsub code/hello_world.sge.sh
 ```
 
+SGE header explained
+```
+# -cwd              run script in current working directory
+# -v                exports all environment variables
+# -S <..>           shell used for the job
+# -j y              merge stderr and stdout to the same file (-o)
+# -N <job_id>       sets the name used for the job
+# -o <outfile>      output file for stderr (and stdout if -j y)
+# -q <queue>        direct the job to this queue (high_mem.q, all.q)
+# -pe <env> <#t>    parallel environment (almost always 'smp') and num threads
+```
+
+
+
+
 2) submit from shell script
 ```
 qsub -N -P ... code/hello_world.sh
@@ -58,4 +73,4 @@ to pause queued jobs
 `qalter`
 
 `-job_hold_id`
-blank
+
