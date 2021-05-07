@@ -44,7 +44,7 @@ While this option is sometimes convenient, it is less robust/reproducible than i
 Often times, it is useful to submit batch jobs from within another script.  Ex. You write a script that is going to use the scatter/gather method to spawn a bunch of smaller jobs, then merge them again after they have completed.  IN this case, you can submit raw `bash` to the scheduler directly from the command line.  For example, the code below submits the same job 100x.
 
 ```
-for i in $(seq 1 100)
+for i in $(seq 1 100); do
 
     CMD="echo "Hello world from hello_world.sge.sh on "`hostname`"
     
