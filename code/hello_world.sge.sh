@@ -1,5 +1,5 @@
-#$ -V
 #$ -cwd
+#$ -V
 #$ -S /bin/bash
 #$ -N submit_hw
 #$ -o submit_hw.stdeo
@@ -7,5 +7,6 @@
 #$ -q all.q
 #$ -pe smp 1
 
-echo "Hello world from "`hostname`
-	
+
+echo "Hello world from hello_world.sge.sh on "`hostname`
+
